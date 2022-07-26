@@ -1,0 +1,20 @@
+.hero {
+    background-color: var(--background);
+    padding-top: 12rem;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-text > * {
+    margin-bottom: 1rem;
+    color: var(--foreground);
+}
+
+.btn-video {
+    background: var(--foreground);
+    color: var(--background);
+}
