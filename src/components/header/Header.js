@@ -1,9 +1,11 @@
-import React from "react";
+import { useContext } from "react";
+import ThemeContext from "../../context/themeContext";
 import logo from "../../assets/logo.png";
 import { FaMoon, FaSun } from "react-icons/fa";
 import "./header.css";
 
-const Header = ({ theme, toggleTheme, onSwitch }) => {
+const Header = () => {
+  const { theme, toggleTheme, switchBtn } = useContext(ThemeContext);
   return (
     <header data-theme={theme}>
       <div className="container --flex-between">
@@ -24,7 +26,7 @@ const Header = ({ theme, toggleTheme, onSwitch }) => {
           <span className="toggle-btn">
             <FaMoon color="pink" size={16} />
             <FaSun color="yellow" size={16} />
-            <div className={onSwitch ? "ball move" : "ball"}></div>
+            <div className={switchBtn ? "ball move" : "ball"}></div>
           </span>
         </div>
       </div>

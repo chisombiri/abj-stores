@@ -1,8 +1,10 @@
-import React from "react";
+import { useContext } from "react";
+import ThemeContext from "../../context/themeContext";
 import heroImg from "../../assets/phone.svg";
 import "./hero.css";
 
-const Hero = ({ theme }) => {
+const Hero = () => {
+  const { theme } = useContext(ThemeContext);
   return (
     <section className="hero" data-theme={theme}>
       <div className="container --grid-15">
